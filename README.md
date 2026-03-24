@@ -15,7 +15,6 @@ All’interno della Navbar aggiungete un bottone “Modalità Budget” che atti
 Il bottone deve cambiare etichetta in base allo stato (Attiva Modalità Budget / Disattiva Modalità Budget)
 
 # MILESTONE 3
-
 Modificate la pagina dei prodotti:
 Recuperate il valore budgetMode usando il context
 Se budgetMode === true, mostrate solo i prodotti con price <= 30
