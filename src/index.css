@@ -1,0 +1,274 @@
+/* IMPORTING CUSTOM FONTS FROM GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+/* ROOT -- PAGE PALETTE & FONTS */
+:root {
+    --primarycolor: #111111;
+    --secondarycolor: #FFFFFF;
+    --accents: #4F46E5;
+    --background: #F9FAFB;
+    --soft-texts: #6B72B0;
+    --logofont: 'Syne', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--secondarycolor);
+}
+
+.nav-link {
+    font-family: var(--logofont);
+    font-weight: 500;
+
+}
+
+/* LOGO */
+.navbar-brand {
+    font-family: var(--logofont);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.logoDot {
+    color: var(--accents);
+}
+
+/* MAIN -- HOME PAGE */
+.herobanner {
+    padding: 110px 48px 90px
+}
+
+.herobanner h1 {
+    font-family: var(--logofont);
+    font-weight: 700;
+    font-size: 62px;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin: 0 0 24px;
+}
+
+.mottospecial {
+    color: var(--accents);
+}
+
+.herobanner p {
+    font-size: 18px;
+    color: var(--soft-texts);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.goto {
+    background: var(--primarycolor);
+    color: var(--secondarycolor);
+    border: none;
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.reviews {
+    padding: 56px 48px 0;
+}
+
+.reviews h2 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+}
+
+.gridcard {
+    background: var(--background);
+    border-radius: 12px;
+    padding: 20px 22px;
+    height: 100%;
+}
+
+.gridcard p {
+    font-size: 14px;
+    color: var(--soft-texts);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.gridavatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accents);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gridname {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.gridrole {
+    display: block;
+    font-size: 12px;
+    color: var(--soft-texts);
+}
+
+/* MAIN -- ABOUT US */
+.hero {
+    padding: 100px 48px 80px;
+    max-width: 700px;
+}
+
+.sticker {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accents);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--logofont);
+    font-weight: 700;
+    font-size: 62px;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin: 0 0 24px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--soft-texts);
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* CARDS */
+.productshead {
+    font-family: var(--logofont);
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin: 0 0 24px;
+}
+
+.card {
+    background-color: var(--secondarycolor);
+    border: 1px solid rgba(79, 70, 229, 0.25);
+    color: var(--primarycolor);
+    font-size: 14px;
+    font-family: var(--logofont);
+    border-radius: 14px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15);
+}
+
+.card-title {
+    color: var(--primarycolor);
+    font-family: var(--logofont);
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card strong {
+    color: var(--accents);
+}
+
+.card-img-top {
+    background-color: var(--background);
+    height: 10rem;
+    object-fit: contain;
+    border-bottom: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.badge-price {
+    display: inline-block;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--accents);
+    font-weight: 600;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.btn-add-to-cart {
+    display: block;
+    width: 100%;
+    background: var(--accents);
+    color: var(--secondarycolor);
+    font-family: var(--logofont);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.description {
+    color: var(--soft-texts);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* SINGLE PRODUCT */
+.singletitle {
+    font-family: var(--logofont);
+    font-weight: 700;
+    font-size: 62px;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin: 0 0 24px;
+}
+
+.singledescr {
+    font-size: 18px;
+    color: var(--soft-texts);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.singleimg {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+}
+
+.singleprice {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2c2c2c;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #4F46E515;
+    padding: 7px 18px;
+}
+
+.singleprice .money {
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: var(--soft-texts);
+}
+
+.singleprice .number {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accents);
+}
