@@ -4,10 +4,16 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 /* Importing the Link component from React Router */
 import { Link } from "react-router-dom";
+/* Importing useContext */
+import { useContext } from "react"
+/* Importing BudgetContext.jsx */
+import { BudgetContext } from "../context/BudgetContext"
 
 export default function Products() {
     /* Declaring an useState variable where my API of products will go */
     const [products, setProducts] = useState([]);
+    const [allProducts, setAllProducts] = useState([])
+    const { budgetMode, setBudgetMode } = useContext(BudgetContext)
 
     /* "fetching" with Axios to print my array of products */
     function storeAPI() {
@@ -17,15 +23,29 @@ export default function Products() {
                 console.log(res.data);
                 /* Assigning my data to my state variable */
                 setProducts(res.data);
+                setAllProducts(res.data);
             })
             .catch((err) => {
                 console.error("Error fetching products:", err);
             });
     }
 
+    function cheapProducts() {
+        const filteredProducts = products.filter((product) => product.price < 30)
+        setProducts(filteredProducts)
+    }
+
     useEffect(() => {
         storeAPI(products)
     }, [])
+
+    useEffect(() => {
+        if (budgetMode) {
+            cheapProducts()
+        } else {
+            setProducts(allProducts)
+        }
+    }, [budgetMode])
 
     return (
         <main>

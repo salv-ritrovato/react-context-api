@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BudgetContext from './context/BudgetContext';
+import { BudgetContext, BudgetProvider} from './context/BudgetContext';
 /* Importing my pages */
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       {/* Wrapping my page with BudgetContext */}
-      <BudgetContext>
+      <BudgetProvider>
         <BrowserRouter>
           <Routes>
             {/* Using DefaultLayout to import my header and footer in every page */}
@@ -31,7 +31,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </BudgetContext>
+      </BudgetProvider>
     </>
   )
 }

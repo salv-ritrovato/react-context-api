@@ -13,7 +13,8 @@ const navbar = [{
     id: 3,
     path: '/products',
     text: 'Products'
-}];
+},
+];
 
 export default navbar
 
